@@ -70,8 +70,9 @@
 </head>
 <body>
     <div class="login">
+       <h1>Student Exam Performance Indicator</h1>
    
-       <form action="{{ url_for('predict_datapoint')}}" method="post"> <!--predict_datapoint is the predict function in app.py -->
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
         <h1>
             <legend>Student Exam Performance Prediction</legend>
         </h1>
@@ -160,12 +161,12 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Writing Score out of 100</label>
-            <input class="form-control" type="text"   name="reading_score"
+            <input class="form-control" type="number" name="reading_score"
                 placeholder="Enter your Reading score" min='0' max='100' />
         </div>
         <div class="mb-3">
             <label class="form-label">Reading Score out of 100</label>
-            <input class="form-control" type="text" name="writing_score"
+            <input class="form-control" type="number" name="writing_score"
                 placeholder="Enter your Reading Score" min='0' max='100' />
         </div>
         <div class="mb-3">
