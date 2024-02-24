@@ -21,15 +21,16 @@ from src.utils import save_object,evaluate_models
 
 @dataclass
 class ModelTrainerConfig:
-    trainer_model_file_path = os.path.join("artifacts","model.pkl")
+    trained_model_file_path=os.path.join("artifacts","model.pkl")
 
 class ModelTrainer:
     def __init__(self):
         self.model_trainer_config=ModelTrainerConfig()
 
-    def initiate_model_trainer(self,train_array, test_array):
+
+    def initiate_model_trainer(self,train_array,test_array):
         try:
-            logging.info("Split train")
+            logging.info("Split training and test input data")
             X_train,y_train,X_test,y_test=(
                 train_array[:,:-1],
                 train_array[:,-1],
@@ -45,7 +46,6 @@ class ModelTrainer:
                 "CatBoosting Regressor": CatBoostRegressor(verbose=False),
                 "AdaBoost Regressor": AdaBoostRegressor(),
             }
-
             params={
                 "Decision Tree": {
                     'criterion':['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
@@ -102,7 +102,7 @@ class ModelTrainer:
             logging.info(f"Best found model on both training and testing dataset")
 
             save_object(
-                file_path=self.model_trainer_config.trainer_model_file_path,
+                file_path=self.model_trainer_config.trained_model_file_path,
                 obj=best_model
             )
 
@@ -110,5 +110,10 @@ class ModelTrainer:
 
             r2_square = r2_score(y_test, predicted)
             return r2_square
+            
+
+
+
+            
         except Exception as e:
             raise CustomException(e,sys)
