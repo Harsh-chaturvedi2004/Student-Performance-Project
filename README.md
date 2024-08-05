@@ -10,6 +10,8 @@
 - Model Training
 - Choose best model
 
+## Exploratory Data Analysis
+
 ### 1) Problem statement
 - This project understands how the student's performance (test scores) is affected by other variables such as Gender, Ethnicity, Parental level of education, Lunch and Test preparation course.
 
@@ -40,3 +42,11 @@
 - Check various categories present in the different categorical column
 
 <img width="616" alt="image" src="https://github.com/user-attachments/assets/0538e117-90c5-4bec-8e7e-e925b97bf53c">
+
+### 4. Conclusions
+- Student's Performance is related with lunch, race, parental level education
+- Females lead in pass percentage and also are top-scorers
+- Student's Performance is not much related with test preparation course
+- Finishing preparation course is benefitial.
+
+
