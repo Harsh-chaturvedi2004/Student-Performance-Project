@@ -16,6 +16,7 @@
 ### 2) Data Collection
 - Dataset Source - https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?datasetId=74977
 - The data consists of 8 column and 1000 rows.
+![image](https://github.com/user-attachments/assets/ee9ebd3a-6a39-4815-9ce9-1519af0f2e06)
 
 ### 2.2 Data Card
 - gender : sex of students  -> (Male/female)
@@ -37,3 +38,5 @@
 - Check the number of unique values of each column
 - Check statistics of data set
 - Check various categories present in the different categorical column
+
+<img width="616" alt="image" src="https://github.com/user-attachments/assets/0538e117-90c5-4bec-8e7e-e925b97bf53c">
